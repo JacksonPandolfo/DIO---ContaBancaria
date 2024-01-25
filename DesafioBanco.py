@@ -99,37 +99,6 @@ def criarUsuario(usuarios):
   usuario["endereco"]["siglaEstado"] = input("Estado (UF): ").upper()
   usuarios.append(usuario)
 
-  # print(len(usuarios))
-  # if len(usuarios) == 0:
-  #   usuario["CPF"] = input("CPF: ")
-  #   usuario["nome"] = input("Primeiro nome: ").upper()
-  #   usuario["sobrenome"] = input("Sobrenome: ").upper()
-  #   usuario["dataNascimento"] = input("Data de nascimento (DD/MM/AAAA): ")
-  #   usuario["endereco"]["logradouro"] = input("Logradouro: ").upper()
-  #   usuario["endereco"]["numero"] = input("Número da residencia: ")
-  #   usuario["endereco"]["bairro"] = input("Bairro: ").upper()
-  #   usuario["endereco"]["cidade"] = input("Cidade: ").upper()
-  #   usuario["endereco"]["siglaEstado"] = input("Estado (UF): ").upper()
-  #   usuarios.append(usuario)
-  # else:
-  #   cpf = input("CPF: ")
-  #   for elm in usuarios:
-  #     if cpf in elm.get("CPF"):
-  #       print("CPF já cadastrado!")
-  #       usuarioExiste = True
-  #       break
-  #   if not usuarioExiste:
-  #     usuario["CPF"] = cpf
-  #     usuario["nome"] = input("Primeiro nome: ").upper()
-  #     usuario["sobrenome"] = input("Sobrenome: ").upper()
-  #     usuario["dataNascimento"] = input("Data de nascimento (DD/MM/AAAA): ")
-  #     usuario["endereco"]["logradouro"] = input("Logradouro: ").upper()
-  #     usuario["endereco"]["numero"] = input("Número da residencia: ")
-  #     usuario["endereco"]["bairro"] = input("Bairro: ").upper()
-  #     usuario["endereco"]["cidade"] = input("Cidade: ").upper()
-  #     usuario["endereco"]["siglaEstado"] = input("Estado (UF): ").upper()
-  #     usuarios.append(usuario)
-
 def filtrarUsuario(cpf, usuarios):
   usuariosFiltrados = [usuario for usuario in usuarios if usuario["CPF"] == cpf]
   return usuariosFiltrados[0] if usuariosFiltrados else None
